@@ -1,6 +1,5 @@
 import menuTemplate from './templates/list-item.hbs';
 import menuElement from './menu.json';
-import './styles.css';
 
 const refs = {
   menu: document.querySelector('.js-menu'),
