@@ -7,12 +7,13 @@ const refs = {
   switch: document.querySelector('.theme-switch__toggle'),
 };
 
-function buildMenu(array) {
-    const markup = array.map(post => menuTemplate(post)).join('');
-    refs.menu.insertAdjacentHTML('beforeend', markup);
-}
+const markupCardMenu = createMenu(menuElement);
 
-buildMenu(menuElement);
+refs.menu.insertAdjacentHTML('beforeend', markupCardMenu);
+
+function createMenu(menuElement) {
+    return menuElement.map(menuTemplate).join('');
+}
 
 // change Theme
 const Theme = {
